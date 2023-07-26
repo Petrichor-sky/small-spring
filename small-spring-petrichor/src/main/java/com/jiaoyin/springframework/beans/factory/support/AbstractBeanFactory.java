@@ -10,7 +10,9 @@ import com.jiaoyin.springframework.beans.factory.config.BeanDefinition;
  * BeanDefinition 注册表接口
  */
 public abstract class AbstractBeanFactory extends DefaultSingletonBeanRegistry implements BeanFactory {
-
+    /**
+     * 先是直接从单例bean容器中去获取,没有的话再
+     */
     @Override
     public Object getBean(String name) throws BeansException {
         //BeanFactory中的抽象方法调用DefaultSingletonBeanRegistry的单例bean

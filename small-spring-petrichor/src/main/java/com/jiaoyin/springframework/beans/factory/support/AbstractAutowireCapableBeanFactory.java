@@ -21,4 +21,8 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
         return bean;
     }
 
+    @Override
+    public Object getBean(String name, Object... args) throws BeansException {
+        return null;
+    }
 }
